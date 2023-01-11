@@ -36,14 +36,48 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-function game() {
-    for (let i = 0; i < 5; i++) {
-        const playerSelection = prompt("Type in rock, paper or scissors").toLowerCase();
-        const computerSelection = getComputerChoice();
-        console.log(playRound(playerSelection, computerSelection));
-        console.log(`Player: ${playerScore}`);
-        console.log(`Computer: ${computerScore}`);
-    }
-}
+const scorePlayer = document.querySelector("#playerScore");
+const scoreComputer = document.querySelector("#computerScore");
 
-game()
+const btnRock = document.querySelector("#rock");
+btnRock.addEventListener("click", function () {
+    const playerSelection = 'rock';
+    computerSelection = getComputerChoice();
+    playRound(playerSelection, computerSelection);
+    scorePlayer.innerText = `Player: ${playerScore}`;
+    scoreComputer.innerText = `Computer: ${computerScore}`;
+    if (playerScore === 5) {
+        alert("Player won!")
+    } else if (computerScore === 5) {
+        alert("Computer won!")
+    }
+})
+
+
+const btnPaper = document.querySelector("#paper");
+btnPaper.addEventListener("click", function () {
+    const playerSelection = 'paper';
+    computerSelection = getComputerChoice();
+    playRound(playerSelection, computerSelection);
+    scorePlayer.innerText = `Player: ${playerScore}`;
+    scoreComputer.innerText = `Computer: ${computerScore}`;
+    if (playerScore === 5) {
+        alert("Player won!")
+    } else if (computerScore === 5) {
+        alert("Computer won!")
+    }
+})
+
+const btnScissors = document.querySelector("#scissors");
+btnScissors.addEventListener("click", function () {
+    const playerSelection = 'scissors';
+    computerSelection = getComputerChoice;
+    playRound(playerSelection, computerSelection);
+    scorePlayer.innerText = `Player: ${playerScore}`;
+    scoreComputer.innerText = `Computer: ${computerScore}`;
+    if (playerScore === 5) {
+        alert("Player won!")
+    } else if (computerScore === 5) {
+        alert("Computer won!")
+    }
+})
