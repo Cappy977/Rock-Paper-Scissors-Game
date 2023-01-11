@@ -71,7 +71,7 @@ btnPaper.addEventListener("click", function () {
 const btnScissors = document.querySelector("#scissors");
 btnScissors.addEventListener("click", function () {
     const playerSelection = 'scissors';
-    computerSelection = getComputerChoice;
+    computerSelection = getComputerChoice();
     playRound(playerSelection, computerSelection);
     scorePlayer.innerText = `Player: ${playerScore}`;
     scoreComputer.innerText = `Computer: ${computerScore}`;
