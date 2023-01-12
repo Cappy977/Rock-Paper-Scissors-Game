@@ -1,9 +1,12 @@
 body {
+    margin: 0px;
+    padding: 0px;
     text-align: center;
 }
 
 .results {
     font-size: 1.5em;
+    font-weight: bold;
 }
 
 button {
@@ -12,4 +15,29 @@ button {
     width: 120px;
     border-radius: 25px;
     font-size: 1.125em;
+}
+
+#newGameBtn {
+    margin-top: 200px;
+}
+
+#winningMsg {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.tie {
+    color: orange;
+}
+
+.winner {
+    color: green;
+}
+
+.looser {
+    color: red;
+}
+
+.msgShowingUp {
+    height: 100px;
 }
